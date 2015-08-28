@@ -1,0 +1,9 @@
+C:\Users\Administrator\Dropbox\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.dll
+C:\Users\Administrator\Dropbox\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.pdb
+C:\Users\Administrator\Dropbox\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Dropbox\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.dll
+C:\Users\Administrator\Dropbox\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.pdb
+C:\Development\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.dll
+C:\Development\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.pdb
+C:\Development\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.dll
+C:\Development\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.pdb
