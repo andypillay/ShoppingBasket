@@ -114,7 +114,7 @@ namespace ShoppingBasketUI
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }// Close Program
 
         private void MainUI_Load(object sender, EventArgs e)
         {
@@ -139,7 +139,9 @@ namespace ShoppingBasketUI
             tTAdd.SetToolTip(btn_Exit, "Exit out Shopping Basket");
         }
 
-        private void txt_LatestPrice_TextChanged(object sender, EventArgs e)
+        private void txt_LatestPrice_TextChanged(object sender, EventArgs e) 
+            // Validates, corrects and confirms values inputed are numeric and adds "£".
+            //e.g 3.30 becomes £3.30
         {
             //Remove previous formatting, or the decimal check will fail including leading zeros
             string value = txt_LatestPrice.Text.Replace(",", "").Replace("£", "")
@@ -163,7 +165,7 @@ namespace ShoppingBasketUI
             ActiveIndex = e.RowIndex;
         }
 
-        private void btn_ClearBasket_Click(object sender, EventArgs e)
+        private void btn_ClearBasket_Click(object sender, EventArgs e)//Clear all in basket.
         {
             if (shop.EmptyBasket() == false)
             {
@@ -178,7 +180,7 @@ namespace ShoppingBasketUI
             {
                 MessageBox.Show("There are no items in the basket to clear");
             }
-        }
+        }// Clear
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -198,6 +200,6 @@ namespace ShoppingBasketUI
                 MessageBox.Show("There are no items in the basket");
             }
 
-        }
+        }// Saves basket to .txt file.
     }
 }

@@ -161,7 +161,7 @@ namespace Tests
         public void CreatedFile()
         {
             // Arrange 
-            string inputFile = @"C:\InputData.txt";
+            string inputFile = @"C:\Development\InputData.txt";
             ShoppingBasket meal = new ShoppingBasket();
             meal.AddProduct("Beans", 1.00M, 4);
 
@@ -172,7 +172,7 @@ namespace Tests
             
 
             // Assert
-            Assert.IsTrue(File.Exists(@"C:\InputData.txt"));
+            Assert.IsTrue(File.Exists(@"C:\Development\InputData.txt"));
         }
 
     }

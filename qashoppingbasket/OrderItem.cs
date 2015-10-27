@@ -57,10 +57,12 @@ namespace QAShoppingBasket
         }
 
         public decimal TotalOrder { get { return LatestPrice * Quantity; } }
+
         public OrderItem(string pName, decimal lPrice):this (pName, lPrice, 1)
         {
 
         }
+
         public OrderItem(string pName, decimal lPrice,int quant)
         {
             if (lPrice < 0 || quant <= 0 || pName == string.Empty)

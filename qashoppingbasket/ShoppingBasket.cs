@@ -39,16 +39,20 @@ namespace QAShoppingBasket
             OrderItems = new List<OrderItem>();
         }
 
+        //Add product and price of product
         public bool AddProduct(string productName, decimal latestProductValue)
         {
             return AddProduct(productName,latestProductValue,1);
             
         }
 
+        //Add product, price of product and quanitity.
         public bool AddProduct(string productName, decimal latestProductValue, int quantOfProducts)
         {
+            //Check if values entered are null.
             if (!string.IsNullOrEmpty(productName) && quantOfProducts > 0)
             {
+                // Check if product exists
                 OrderItem oi = OrderItems.Find(x => x.ProductName == productName);
                 if (oi == null)
                 {
@@ -68,7 +72,7 @@ namespace QAShoppingBasket
             }
         }
 
-
+        //Remove product and amount of quanitity.
         public void RemoveProduct(string productName, int quantOfProducts)
         {
             OrderItem item = OrderItems.Find(x => x.ProductName == productName);
@@ -83,6 +87,7 @@ namespace QAShoppingBasket
             else throw new KeyNotFoundException("Product Name Not Found");
         }
 
+        //Remove whole product.
         public void RemoveProduct(string productName)
         {
             RemoveProduct(productName, OrderItems[FindIndex(productName)].Quantity);
@@ -106,13 +111,14 @@ namespace QAShoppingBasket
             return inBasket;
         }
 
+        //Save basket to .txt file.
         public bool SaveBasket(string inputFile)
         {
             bool successful = false;
             try
             {
                 StreamWriter SaveFile = new StreamWriter(inputFile);
-                SaveFile.WriteLine("~~~~~~~~~~~~~~~~~~~Reciept~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                SaveFile.WriteLine("~~~~~~~~~~~~~~~~~~~~~~Reciept~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 SaveFile.WriteLine("[Item Name]\t[Price]\t[Quantity]\t[Item Total]");
                 foreach (OrderItem item in OrderItems)
                 {
@@ -133,6 +139,7 @@ namespace QAShoppingBasket
             return successful;
         }
 
+        //Find index of product.
         public int FindIndex(string productName)
         {
             int index = OrderItems.FindIndex(x => x.ProductName == productName);
@@ -143,7 +150,7 @@ namespace QAShoppingBasket
             return index;
         }
 
-
+        //Edits Product name.
         public void EditProduct(string oldProductName,string editedProductName,decimal editedPrice, int editedQuantity, OrderItem newItem)
         {
             OrderItem oi = OrderItems.Find(x => x.ProductName == oldProductName);
@@ -168,11 +175,13 @@ namespace QAShoppingBasket
                 }
         }
 
+        //Clears all items in list.
         public void ClearAll()
         {
             OrderItems.Clear();
         }
 
+        //Checks if Basket is empty.
         public bool EmptyBasket()
         {
             bool isEmpty = !OrderItems.Any();

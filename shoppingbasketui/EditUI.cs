@@ -37,7 +37,6 @@ namespace ShoppingBasketUI
                 }_editedQuantity = value; }
         }
         
-
         private string _sEditedLatestPrice;
 
         public string SEditedLatestPrice
@@ -50,11 +49,11 @@ namespace ShoppingBasketUI
                 _sEditedLatestPrice = value; }
         }
         
-
         public EditUI()
         {
             
         }
+
         public EditUI(OrderItem oi)
         {
             InitializeComponent();
@@ -71,21 +70,18 @@ namespace ShoppingBasketUI
 
         }
 
-        private void btn_Cancel_Click(object sender, EventArgs e)
+        private void btn_Cancel_Click(object sender, EventArgs e)//Closes Edit windows
         {
             this.Close();
         }
 
-        private void btn_OK_Click(object sender, EventArgs e)
+        private void btn_OK_Click(object sender, EventArgs e)//Whatever strings are set in the setbox and stored to be used in the edit item.
         {
-            //Whatever strings are set in the setbox and stored to be used in the edit item.
             EditedProductName = this.txt_ProductNameEdit.Text;
             EditedQuantity = (int)this.nud_QuantityEdit.Value;
             SEditedLatestPrice = this.txt_LatestPriceEdit.Text;
 
         }
-
-        
 
         private void txt_LatestPriceEdit_TextChanged(object sender, EventArgs e)
         {

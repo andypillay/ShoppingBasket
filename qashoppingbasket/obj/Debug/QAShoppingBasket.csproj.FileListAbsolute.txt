@@ -7,3 +7,4 @@ C:\Development\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.d
 C:\Development\QA\QAShoppingBasket\QAShoppingBasket\bin\Debug\QAShoppingBasket.pdb
 C:\Development\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.dll
 C:\Development\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.pdb
+C:\Development\QA\QAShoppingBasket\QAShoppingBasket\obj\Debug\QAShoppingBasket.csprojResolveAssemblyReference.cache
